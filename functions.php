@@ -11,3 +11,17 @@
     wp_enqueue_script('app');
   }
   add_action('wp_enqueue_scripts', 'scripts');
+
+
+  // Theme Options
+  add_theme_support('menus');
+
+  // Menus
+  register_nav_menus(
+    array(
+      'primary-nav' => 'Desktop Location',
+      'mobile-menu' => 'Mobile Location',
+      'footer-nav' => 'Footer Location'
+    )
+  )
+?>
