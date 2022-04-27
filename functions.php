@@ -2,8 +2,18 @@
 
   function scripts()
   {
+
+    
     wp_register_style('style', get_template_directory_uri() . '/dist/css/app.css', [], 1, 'all');
+    wp_register_style('materialize', get_template_directory_uri() . '/vendor/materialize.css', [], 1, 'all');
+    wp_register_style('font-regular', get_template_directory_uri() . '/fonts/TeXGyreAdventorRegular/style.css', [], 1, 'all');
+    wp_register_style('font-bold', get_template_directory_uri() . '/fonts/TeXGyreAdventorBold/style.css', [], 1, 'all');
+    
     wp_enqueue_style('style');
+    wp_enqueue_style('materialize');
+
+    wp_enqueue_style('font-regular');
+    wp_enqueue_style('font-bold');
 
     wp_enqueue_script('jquery');
 
