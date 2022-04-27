@@ -25,6 +25,7 @@
 
   // Theme Options
   add_theme_support('menus');
+  add_theme_support('post-thumbnails');
 
   // Menus
   register_nav_menus(
@@ -33,5 +34,12 @@
       'mobile-menu' => 'Mobile Location',
       'footer-nav' => 'Footer Location'
     )
-  )
+  );
+
+  // Custom image sizes
+  // boolean is for a hard crop or not
+  add_image_size('banner', 1920, 600, true);
+  add_image_size('blog-large', 800, 400, true);
+  add_image_size('blog-small', 300, 200, true);
 ?>
+

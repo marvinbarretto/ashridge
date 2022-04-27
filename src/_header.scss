@@ -1,7 +1,10 @@
 header {
   background: #111;
-  color: #FFF;
   height: 100px;
-  font-size: 20px !important;
   font-family: 'TeXGyreAdventorRegular', sans-serif !important;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
