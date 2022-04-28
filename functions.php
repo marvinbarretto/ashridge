@@ -63,6 +63,7 @@
   }
 
 
+  // Services
   function services_shortcode()
   {
     ob_start();
@@ -73,7 +74,7 @@
 
 
 
-  function my_first_post_type()
+  function create_service_pages()
   {
     $args = array(
       'labels' => array(
@@ -90,6 +91,6 @@
     register_post_type('services', $args);
 
   }
-  add_action('init', 'my_first_post_type');
+  add_action('init', 'create_service_pages');
 ?>
 
