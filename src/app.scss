@@ -1,5 +1,10 @@
-// TODO: Trplace inmports
+@import 'inherited';
 @import 'colours';
-@import 'header';
-@import 'content';
+// Overrides
+nav {
+  max-width: none;
+}
 
+nav ul li.current-menu-item a {
+  border-bottom: solid 1px $light-grey;
+}

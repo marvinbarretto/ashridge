@@ -9,7 +9,8 @@
 
 <div class="content">
 
-  this is contact us template
+  
+  <?php get_template_part('includes/form', 'enquiry'); ?>
 
   <h1><?php the_title(); ?></h1>
 

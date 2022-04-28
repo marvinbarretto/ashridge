@@ -9,9 +9,9 @@
     wp_register_style('font-regular', get_template_directory_uri() . '/fonts/TeXGyreAdventorRegular/style.css', [], 1, 'all');
     wp_register_style('font-bold', get_template_directory_uri() . '/fonts/TeXGyreAdventorBold/style.css', [], 1, 'all');
     
-    wp_enqueue_style('style');
     wp_enqueue_style('materialize');
-
+    wp_enqueue_style('style');
+    
     wp_enqueue_style('font-regular');
     wp_enqueue_style('font-bold');
 
@@ -39,7 +39,57 @@
   // Custom image sizes
   // boolean is for a hard crop or not
   add_image_size('banner', 1920, 600, true);
+  add_image_size('box', 640, 360, true );
   add_image_size('blog-large', 800, 400, true);
   add_image_size('blog-small', 300, 200, true);
+
+
+  // Form
+  add_action('wp_ajax_contact', 'enquiry_form');
+  add_action('wp_ajax_nopriv_contact', 'enquiry_form');
+  function enquiry_form()
+  {
+    // $data = json_encode($_POST);
+    $formdata = [];
+    wp_parse_str($_POST['enquiry'], $formdata);
+    wp_send_json_success($formdata['name']);
+
+    $admin_email = get_option('admin_email');
+    $headers[] = 'Content-Type: text/html; charset=UTF-8';
+    $headers[] = 'From:' . $admin_email;
+    $headers[] = 'Reply-to:' . $formdata['email'];
+    $send_to = $admin_email;
+    $subject = 'Enquiry from' . $formData['name'];
+  }
+
+
+  function services_shortcode()
+  {
+    ob_start();
+    get_template_part('includes/section', 'services');
+    return ob_get_clean();
+  }
+  add_shortcode('services', services_shortcode);
+
+
+
+  function my_first_post_type()
+  {
+    $args = array(
+      'labels' => array(
+        'name' => 'Services',
+        'singular_name' => 'Service',
+      ),
+      'hierarchical' => true,
+      'public' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-star-filled',
+      'supports' => array('title', 'editor', 'thumbnail'),
+      'rewrite' => array('slug' => 'our-services') 
+    );
+    register_post_type('services', $args);
+
+  }
+  add_action('init', 'my_first_post_type');
 ?>
 
