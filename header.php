@@ -45,10 +45,11 @@
               </li>
               <li>
                 <a id="linkedin" class="right" href="https://www.linkedin.com/company/ashridge-surveyors" target="_blank">
-                <svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <!-- <svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <title>linkedin</title>
                   <path class="cls-1" d="M95,0H5A5,5,0,0,0,0,5V95a5,5,0,0,0,5,5H95a5,5,0,0,0,5-5V5A5,5,0,0,0,95,0ZM29.06,88H13.32V37.5H29.06ZM21.2,30.46a9.23,9.23,0,1,1,9.2-9.24A9.21,9.21,0,0,1,21.2,30.46ZM88,88H72.2c0-6.26.06-19.2.06-28.34,0-4.16-1.86-9.76-8.5-9.76-7.32,0-9.1,6.82-9.1,9.76,0,8.78-.08,22.78-.08,28.34H38.88c0-9.38.1-41.6.1-50.7,8.1,0,12,0,15,0,0,3,0,5,0,7.16,2.48-5,9.24-8.14,12.14-8.3,1.32-.06,2.32-.1,3.36-.1h0c1,0,2.1.06,3.54.14,6.94.42,14.68,5.86,14.9,18.6C88,65.26,88,81.88,88,88Z"></path>
-                </svg>
+                </svg> -->
+                <img id="linkedin-icon" src="<?php bloginfo('template_url'); ?>/assets/logo--linkedin.svg">
                 </a>
               </li>
             </ul>

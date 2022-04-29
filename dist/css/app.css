@@ -918,6 +918,32 @@ nav {
   max-width: none;
 }
 
-nav ul li.current-menu-item a {
+nav ul li.current-menu-item a a,
+nav ul li.current_page_parent a {
   border-bottom: solid 1px #e0e0e0;
+}
+
+ul.sub-menu {
+  display: none;
+}
+
+footer.page-footer {
+  display: block;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.nav--footer {
+  display: flex;
+  margin: 0.9rem 0;
+  line-height: 1.4rem;
+}
+.nav--footer li {
+  padding-left: 1rem;
+}
+.nav--footer li a {
+  color: #8e8e8e;
+}
+
+#linkedin-icon svg {
+  fill: #8e8e8e;
 }
