@@ -6,11 +6,9 @@ nav {
   max-width: none;
 }
 
-nav ul li.current-menu-item a,
-nav ul li.current_page_parent {
-  a {
-    border-bottom: solid 1px $light-grey; 
-  }
+#menu-primary-nav li.current-menu-item a,
+#menu-primary-nav li.current_page_parent a {
+  border-bottom: solid 1px $light-grey; 
 }
 
 ul.sub-menu {
@@ -19,7 +17,6 @@ ul.sub-menu {
 
 footer.page-footer {
   display: block;
-  background: rgba(red, .1);
 }
 
 .nav--footer {
@@ -34,6 +31,70 @@ footer.page-footer {
   }
 }
 
+#rics-logo,
 #linkedin-icon svg {
   fill: $med-grey;
 }
+
+
+.wpforms-field-container {
+  background: rgba(red, .3);
+}
+
+.wpforms-field {
+  padding-left: 3rem;
+}
+
+.form--home {}
+.form--company {}
+.form--tel {}
+.form--email {}
+.form--message {}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+  font-weight: normal;
+  font-size: 14px;
+  color: $dark;
+}
+
+blockquote {
+  padding-left: 0;
+  border-left: 0;
+  color: $med-grey;
+}
+
+cite {
+  &:before {
+    content: "- "
+  }
+  color: $dark;
+}
+
+.has-text-align-center {
+  display: block !important;
+}
+
+
+.word {
+  color: $dark;
+  &:after {
+    content: ".";
+    position: absolute;
+  }
+}
+.word-last {
+  color: $med-grey;
+}
+
+h1.homepage {
+  color: $med-grey;
+}
+
+.wpforms-field-container {
+  max-width: 400px;
+}
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms-container-full .wpforms-form select.wpforms-field-medium, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+  max-width: 100%;
+}
+

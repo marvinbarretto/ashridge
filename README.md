@@ -1,1 +1,4 @@
-# ashridge
+# Ashridge
+
+npx mix watch
+

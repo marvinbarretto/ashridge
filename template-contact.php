@@ -17,9 +17,8 @@
     <div class="container">
       <div class="row no-marg-bot">
         <div class="col s6 push-s1 hide-on-small-and-down no-padding vbar theme-bg4">
-          <!--h1 class="alt1 center theme-text">Surveying.<span style="font-size:0"> </span><span class="theme-text2">Simplified.</span></h1-->
           <h1 class="alt1 center theme-text">
-            <?php the_title() ?>
+          <?php echo get_post_meta($post->ID, 'banner', true); ?>
           </h1>
           <svg id="banner-logo" data-name="banner-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544.49 148.67">
             <title>logo</title>
@@ -58,14 +57,16 @@
         </div>        
       </div>
     </div>
-    <!-- <h1 class="alt2 center theme-text theme-bg4 hide-on-med-and-up">Surveying.<span style="font-size:0"> </span><span class="theme-text2">Simplified.</span></h1> -->
-    <h1 class="alt2 center theme-text theme-bg4 hide-on-med-and-up"><?php the_title(); ?></h1>
+    
+    <h1 class="alt2 center theme-text theme-bg4 hide-on-med-and-up"><?php echo get_post_meta($post->ID, 'banner', true); ?></h1>
   </div>
 
   <div class="container">
     <div class="section">
       <?php get_template_part('includes/section', 'content'); ?>
     </div>
+
+    <?php get_template_part('includes/section', 'rics'); ?>
 
     <?php get_template_part('includes/section', 'services'); ?> 
   </div> 

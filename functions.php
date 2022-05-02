@@ -63,6 +63,14 @@
   }
 
 
+  function titles_shortcode($atts, $content = null)
+  {
+    return $content;
+  }
+  add_shortcode('title', titles_shortcode);
+
+  
+
   // Services
   function services_shortcode()
   {
@@ -71,7 +79,6 @@
     return ob_get_clean();
   }
   add_shortcode('services', services_shortcode);
-
 
 
   function create_service_pages()
@@ -85,7 +92,7 @@
       'public' => true,
       'has_archive' => true,
       'menu_icon' => 'dashicons-star-filled',
-      'supports' => array('title', 'editor', 'thumbnail'),
+      'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
       'rewrite' => array('slug' => 'our-services') 
     );
     register_post_type('services', $args);
