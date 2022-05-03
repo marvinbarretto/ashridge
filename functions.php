@@ -1,9 +1,7 @@
 <?php
 
   function scripts()
-  {
-
-    
+  {    
     wp_register_style('style', get_template_directory_uri() . '/dist/css/app.css', [], 1, 'all');
     wp_register_style('materialize', get_template_directory_uri() . '/vendor/materialize.css', [], 1, 'all');
     wp_register_style('font-regular', get_template_directory_uri() . '/fonts/TeXGyreAdventorRegular/style.css', [], 1, 'all');
@@ -42,25 +40,6 @@
   add_image_size('box', 640, 360, true );
   add_image_size('blog-large', 800, 400, true);
   add_image_size('blog-small', 300, 200, true);
-
-
-  // Form
-  add_action('wp_ajax_contact', 'enquiry_form');
-  add_action('wp_ajax_nopriv_contact', 'enquiry_form');
-  function enquiry_form()
-  {
-    // $data = json_encode($_POST);
-    $formdata = [];
-    wp_parse_str($_POST['enquiry'], $formdata);
-    wp_send_json_success($formdata['name']);
-
-    $admin_email = get_option('admin_email');
-    $headers[] = 'Content-Type: text/html; charset=UTF-8';
-    $headers[] = 'From:' . $admin_email;
-    $headers[] = 'Reply-to:' . $formdata['email'];
-    $send_to = $admin_email;
-    $subject = 'Enquiry from' . $formData['name'];
-  }
 
 
   function titles_shortcode($atts, $content = null)
