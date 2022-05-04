@@ -52,8 +52,16 @@
         </div>        
       </div>
     </div>
-    <!-- <h1 class="alt2 center theme-text theme-bg4 hide-on-med-and-up">Surveying.<span style="font-size:0"> </span><span class="theme-text2">Simplified.</span></h1> -->
     <h1 class="alt2 center theme-text theme-bg4 hide-on-med-and-up"><?php the_title(); ?></h1>
+  </div>
+
+  <div class="section no-padding">
+    <div class="container">    
+      <div class="row center no-marg-bot">
+	      <div class="triangle"></div>
+        <p class="short-line theme-bg3"></p>
+      </div>
+    </div>
   </div>
 
   <div class="container">

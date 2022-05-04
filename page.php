@@ -56,6 +56,15 @@
     </h1>
   </div>
 
+  <div class="section no-padding">
+    <div class="container">    
+      <div class="row center no-marg-bot">
+	      <div class="triangle"></div>
+        <p class="short-line theme-bg3"></p>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="section">
       <?php get_template_part('includes/section', 'content'); ?>
