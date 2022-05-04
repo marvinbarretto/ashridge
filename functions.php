@@ -46,7 +46,7 @@
   {
     return $content;
   }
-  add_shortcode('title', titles_shortcode);
+  add_shortcode('title', 'titles_shortcode');
   
 
   // Services
@@ -56,7 +56,7 @@
     get_template_part('includes/section', 'services');
     return ob_get_clean();
   }
-  add_shortcode('services', services_shortcode);
+  add_shortcode('services', 'services_shortcode');
 
 
   function create_service_pages()
