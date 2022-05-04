@@ -47,7 +47,6 @@
     return $content;
   }
   add_shortcode('title', titles_shortcode);
-
   
 
   // Services
@@ -79,4 +78,3 @@
   }
   add_action('init', 'create_service_pages');
 ?>
-
